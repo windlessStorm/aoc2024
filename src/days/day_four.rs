@@ -1,6 +1,4 @@
-use std::fmt::format;
-use std::io::Lines;
-use ndarray::{arr2, Array, Array2, OwnedRepr};
+use ndarray::{Array, OwnedRepr};
 use ndarray::prelude::*;
 use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
