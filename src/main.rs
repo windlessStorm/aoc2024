@@ -1,4 +1,5 @@
 use std::fs;
+use days::day_five::DayFive;
 use days::day_one::DayOne;
 use days::day_two::DayTwo;
 use days::day_three::DayThree;
@@ -28,7 +29,7 @@ fn day_to_problem(day: usize) -> Option<Box<dyn Problem>> {
         2 => Some(Box::new(DayTwo{})),
         3 => Some(Box::new(DayThree{})),
         4 => Some(Box::new(DayFour{})),
-        // 5 => Some(Box::new(DayTwo{})),
+        5 => Some(Box::new(DayFive{})),
         // 6 => Some(Box::new(DayThree{})),
         // 7 => Some(Box::new(DayOne{})),
         // 8 => Some(Box::new(DayTwo{})),

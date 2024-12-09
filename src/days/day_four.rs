@@ -355,7 +355,7 @@ impl Problem for DayFour {
                     // display_matrix(vec![Point2d{ x: row, y: column}], arr.clone(), nrows, ncolumns);
                     match check_dir(row, column, arr.clone(), nrows, ncolumns, dir) {
                         None =>  {}// println!("No Xmas in dir {:?}", dir),
-                        Some(val) => { 
+                        Some(_val) => { 
                             // println!("found xmas in dir {:?} {:?}", dir, val);
                             // display_matrix(vec![val.x_pos, val.m_pos, val.a_pos, val.s_pos], arr.clone(), nrows, ncolumns, ('[',']'));
                             total_xmas_count += 1;
