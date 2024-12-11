@@ -26,7 +26,6 @@ fn fix_incorrectly_ordered_updates(mut seq: Vec<usize>, mut page_follow_order_ma
         for i in 0..(seq.len() - 1) {
             let mut nothing_to_fix = false;
             while !nothing_to_fix {
-                nothing_to_fix = false;
                 let page_one = seq[i];
                 let page_two = seq[i+1];
 
@@ -55,7 +54,7 @@ impl Problem for DayFive {
         let content = read_file("src/inputs/day5.txt");
         let mut split = content.split("\r\n\r\n");
         let ordering_rules: Vec<Vec<usize>> = split.next().unwrap().split("\r\n").map(|pair| pair.split("|").map(|x| x.parse::<usize>().unwrap()).collect()).collect();
-        let print_sequence: Vec<Vec<usize>> = split.next().unwrap().split("\r\n").map(|line| line.split(",").map(|x| x.parse::<usize>().unwrap()).collect()).collect();;
+        let print_sequence: Vec<Vec<usize>> = split.next().unwrap().split("\r\n").map(|line| line.split(",").map(|x| x.parse::<usize>().unwrap()).collect()).collect();
 
         let mut page_follow_order_map: HashMap<usize, HashSet<usize>> = HashMap::new();
         let mut page_preceding_order_map: HashMap<usize, HashSet<usize>> = HashMap::new();
